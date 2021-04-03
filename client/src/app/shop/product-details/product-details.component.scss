@@ -1,0 +1,107 @@
+body {
+    background-color: #000
+}
+
+.card {
+    border: none;
+    background: rgba( 80, 75, 75, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10.0px );
+-webkit-backdrop-filter: blur( 10.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.product {
+    background: rgba(255, 255, 255, 0.1);
+     overflow: hidden;
+     backdrop-filter: blur(40px);
+     border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    border-radius: 10px;
+
+}
+
+
+.logo {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.brand {
+    font-size: 13px;
+    color: white;
+}
+
+.btn-outline-primary {
+    color: white;
+    //border-color: #3f51b5;
+}
+
+.act-price {
+    color: orangered;
+    font-weight: 900;
+    font-size: 29PX;
+}
+
+.dis-price {
+    text-decoration: line-through
+}
+
+.about {
+    font-size: 14px
+}
+
+.color {
+    margin-bottom: 10px
+}
+
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span {
+    padding: 2px 9px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    color: #ff0000;
+    border-radius: 3px;
+    text-transform: uppercase
+}
+
+label.radio input:checked+span {
+    border-color: #ff0000;
+    background-color: #ff0000;
+    color: #fff
+}
+
+.btn-danger {
+    background-color: rgb(137, 183, 184)!important;
+    border-color: rgb(137, 183, 184) !important
+}
+
+.btn-danger:hover {
+    background-color: rgb(137, 183, 184) !important;
+    border-color: rgb(137, 183, 184) !important
+}
+
+.btn-danger:focus {
+    box-shadow: none
+}
+
+.cart i {
+    margin-right: 10px
+}

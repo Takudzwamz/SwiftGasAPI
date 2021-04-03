@@ -1,0 +1,43 @@
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
+            <div class="card"> 
+                <img class="card-img-top" routerLink="/shop/{{product.id}}" src="{{product.pictureUrl}}">
+                <div class="card-body">
+                    <div style="color:white;" routerLink="/shop/{{product.id}}" class="name h5">{{product.name}}</div>
+                    <div class="d-flex flex-row my-2">
+                        <div style="color:white; " >{{product.price | currency:'R'}}</div>
+                        
+                    </div>
+                    <div style="color:rgb(137, 183, 184);" class="buttons"> <button (click)="addItemToBasket()" style="color:rgb(137, 183, 184);" class="cart-button my-3"> <span style=" background:rgb(137, 183, 184);" class="add-to-cart">Add to cart</span></button> </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

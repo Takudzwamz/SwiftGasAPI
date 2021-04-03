@@ -1,0 +1,9 @@
+[
+  {
+    "Id": 1,
+    "ShortName": "Swift Gas Delivery ",
+    "Description": "Fastest delivery time",
+    "DeliveryTime": "1 day",
+    "Price": 45
+  } 
+]

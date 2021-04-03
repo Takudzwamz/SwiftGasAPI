@@ -1,0 +1,39 @@
+button.nav-link {
+    
+    border-radius: 0;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+     overflow: hidden;
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.5);
+color: white;
+    border-radius: 10px;
+
+    &:focus {
+        outline: none;
+        color: white;
+    }
+    &.active:hover {
+        color: white;
+    }
+    & :active {
+        outline: none;
+        color: white;
+    }
+    &.active:focus {
+        outline: none;
+    }
+    &:disabled:not(.active) {
+        color: white;
+    }
+}
+
+
+.SideBar1{
+   background: rgba(255, 255, 255, 0.1);
+     overflow: hidden;
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 10px;
+}

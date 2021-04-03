@@ -1,0 +1,12 @@
+<pagination 
+style="color:blue; background-color: blue;"
+[boundaryLinks]="true" 
+[totalItems]="totalCount" 
+[ngModel]="pageNumber"
+(pageChanged)="onPagerChange($event)"
+[itemsPerPage]="pageSize"
+previousText="&lsaquo;" 
+nextText="&rsaquo;"
+firstText="&laquo;" 
+lastText="&raquo;">
+</pagination>

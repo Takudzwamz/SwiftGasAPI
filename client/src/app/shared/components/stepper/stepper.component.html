@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="SideBar1" class="container">
+    <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item" *ngFor="let step of steps; let i = index">
+            <button 
+                (click)="onClick(i)"
+                [disabled]="true"
+                [class.active]="selectedIndex === i"
+                class="nav-link text-uppercase font-weight-bold btn-block" style="padding: 1.20em;">
+                {{step.label}}
+            </button>
+        </li>
+    </ul>
+    <div>
+        <ng-container [ngTemplateOutlet]="selected.content"></ng-container>    
+    </div>
+</div>

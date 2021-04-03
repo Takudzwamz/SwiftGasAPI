@@ -1,0 +1,45 @@
+<div class="blur" class="container mt-5">
+  <div style="color: white" class="row">
+    <div style="color: white; overflow-x: auto" class="col-12">
+      <table style="color: white" class="table" style="cursor: pointer">
+        <thead class="thead-light">
+          <tr>
+           <!-- <th scope="col" [appSort]="getOrders()" data-order="desc" data-name="id">
+              Id
+            </th>
+
+            <th scope="col" [appSort]=" orders" data-order="desc" data-name="orderDate" data-type="date">
+              Date Of Birth
+            </th>
+
+            <th scope="col" [appSort]=" orders" data-order="desc" data-name="buyerEmail">
+              Buyer Email
+            </th>
+            <th scope="col" [appSort]=" orders" data-order="desc" data-name="total">
+              Total
+            </th>
+            <th scope="col" [appSort]=" orders" data-order="desc" data-name="status">
+              Status
+            </th>
+
+
+            --><th>Order</th>
+            <th>Date</th>
+            <th>Buyer Email</th>
+            <th>Total</th>
+            <th>Status</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="color: white" *ngFor="let order of orders" routerLink="/orders/{{ order.id }}">
+            <th># {{ order.id }}</th>
+            <td>{{ order.orderDate | date: "medium" }}</td>
+            <td>{{ order.buyerEmail }}</td>
+            <td>{{ order.total | currency: "R" }}</td>
+            <td>{{ order.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+
+<!-- Mobile filters section -->
+
+<div  class="sidebar" id="mobile-filter">
+    <div class="form-inline" *ngIf="products">
+        <input (keyup.enter)="onSearch()" id="search" class="form-control ml-2" #search style="width: 200px" placeholder="Search"
+            type="text">
+        <button (click)="onSearch()" style="color: white" class="btn btn-outline-primary my-2 mt-3  ml-2">Search</button>
+        <button (click)="onReset()" style="color: white" class="btn btn-outline-primary ml-2 mt-3 my-2">Reset</button>
+    </div>
+    <div class="border-bottom pb-2 ml-2">
+        <h4 id="burgundy">Filters</h4>
+    </div>
+    <div class="py-2 border-bottom ml-3">
+        <h6 class="font-weight-bold">Product Type</h6>
+        <div *ngIf="types && brands" id="orange"><span class="fa fa-minus"></span></div>
+        <ul class="list-group my-3">
+            <li class="list-group-item" *ngFor="let type of types" [class.active]="type.id === this.shopParams.typeId"
+                [value]="type.id" (click)="onTypeSelected(type.id)">
+                {{type.name}}
+            </li>
+        </ul>
+    </div>
+    
+    
+    
+    
+</div>
+<!-- Sidebar filter section -->
+<section class="sidebar" id="sidebar">
+    
+    <div class="border-bottom pb-2 ml-2">
+        <h4 id="burgundy">Filters</h4>
+        <button (click)="onReset()" style="color: white" class="btn btn-outline-primary ml-2 mt-2 my-2">Reset</button>
+    </div>
+
+    <div class="py-2 border-bottom ml-3">
+        <h6 class="font-weight-bold">Sort</h6>
+        <select name="sort" id="sort" class="custom-select mb-4" (change)="onSortSelected($event.target.value)">
+            <option id="search" *ngFor="let sort of sortOptions" [selected]="shopParams.sort === sort.value"
+                [value]="sort.value">
+                {{sort.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="py-2 border-bottom ml-3">
+        <h6 class="font-weight-bold">Product Type</h6>
+        <div *ngIf="types && brands" id="orange"><span class="fa fa-minus"></span></div>
+        <ul class="list-group my-3">
+            <li class="list-group-item" *ngFor="let type of types" [class.active]="type.id === this.shopParams.typeId"
+                [value]="type.id" (click)="onTypeSelected(type.id)">
+                {{type.name}}
+            </li>
+        </ul>
+    </div>
+   <!-- <div class="py-2 border-bottom ml-3">
+        <h6 class="font-weight-bold">Product Brand</h6>
+        <div *ngIf="types && brands" id="orange"><span class="fa fa-minus"></span></div>
+        <ul class="list-group my-3">
+            <li class="list-group-item" *ngFor="let brand of brands" [class.active]="brand.id === this.shopParams.brandId"
+                [value]="brand.id" (click)="onBrandSelected(brand.id)">
+                {{brand.name}}
+            </li>
+        </ul>
+    </div> -->
+    
+
+</section>
+<!-- products section -->
+<section class="sidebar" id="products">
+    <div class="container">
+        <div   class="d-flex flex-row">
+
+            <div style="color: white"  class=" m-3" id="res"><app-paging-header  [totalCount]="totalCount" [pageSize]="this.shopParams.pageSize"
+                [pageNumber]="this.shopParams.pageNumber"></app-paging-header></div>
+                
+           <!-- <div class="wrapper " *ngIf="!(isAdmin$ | async)"><a style="font-size: 30px;text-decoration: none;
+              color: white; margin-bottom: 2px;" class="p-2 m-4" routerLink="/basket"> <i class="fa fa-shopping-basket" aria-hidden="true"></i> <span
+                        *ngIf="(basket$ | async)" style="font-size: 20px;text-decoration: none;
+              color: red;">{{(basket$ | async).items.length}}</span></a></div> -->
+           
+        </div>
+    <div class="row ">
+        <div class="col-lg-4 d-flex justify-content-center" *ngFor="let item of products">
+            <app-product-item [product]="item"></app-product-item>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center" *ngIf="totalCount > 0">
+        <app-pager [pageSize]="shopParams.pageSize" [pageNumber]="shopParams.pageNumber" [totalCount]="totalCount"
+            (pageChanged)="onPageChanged($event)"></app-pager>
+    </div>
+
+
+    </div>
+</section>
+
+
+<section style="height: 10px; ">
+    <p>    </p>
+
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+</section>
