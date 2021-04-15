@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using PayFast;
 using StackExchange.Redis;
 
 namespace API
@@ -38,6 +39,8 @@ namespace API
 
         public void ConfigureProductionServices(IServiceCollection services)
         {
+            services.Configure<PayFastSettings>(this._config.GetSection("PayFastSettings"));
+
             services.AddDbContext<StoreContext>(x =>
                 x.UseMySql(_config.GetConnectionString("DefaultConnection")));
 

@@ -9,5 +9,6 @@ namespace Core.Interfaces
          Task<CustomerBasket> CreateOrUpdatePaymentIntent(string basketId);
          Task<Order> UpdateOrderPaymentSucceeded(string paymentIntentId);
          Task<Order> UpdateOrderPaymentFailed(string paymentIntentId);
+        Task<object> CreatepayFastOrder(string email, int deliveryMethodId, string basketId);
     }
 }
