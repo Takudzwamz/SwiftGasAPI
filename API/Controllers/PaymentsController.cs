@@ -21,11 +21,11 @@ namespace API.Controllers
         private readonly string _whSecret;
         private readonly ILogger<IPaymentService> _logger;
         private readonly IMapper _mapper;
-        private readonly IBasketRepository _basketRepository;
+       // private readonly IBasketRepository _basketRepository;
 
-        public PaymentsController(IBasketRepository basketRepository, IPaymentService paymentService, ILogger<IPaymentService> logger, IConfiguration config, IMapper mapper)
+        public PaymentsController(IPaymentService paymentService, ILogger<IPaymentService> logger, IConfiguration config, IMapper mapper) //IBasketRepository basketRepository,
         {
-            _basketRepository = basketRepository;
+          //  _basketRepository = basketRepository;
             _logger = logger;
             _paymentService = paymentService;
             _mapper = mapper;
@@ -48,7 +48,7 @@ namespace API.Controllers
         public async Task<ActionResult<PaymentReturnDto>> CreatepayFastOrder(OrderDto orderDto)
         {
             var email = HttpContext.User.RetrieveEmailFromPrincipal();
-            var address = _mapper.Map<AddressDto, Address>(orderDto.ShipToAddress);
+           // var address = _mapper.Map<AddressDto, Address>(orderDto.ShipToAddress);
 
             var result = await _paymentService.CreatepayFastOrder(email, orderDto.DeliveryMethodId, orderDto.BasketId);
 
