@@ -45,7 +45,7 @@ namespace API.Controllers
 
         [Authorize]
         [HttpPost("pay")]
-        public async Task<ActionResult<PaymentReturnDto>> CreatepayFastOrder(OrderDto orderDto)
+        public async Task<ActionResult> CreatepayFastOrder(OrderDto orderDto)
         {
             var email = HttpContext.User.RetrieveEmailFromPrincipal();
            // var address = _mapper.Map<AddressDto, Address>(orderDto.ShipToAddress);
@@ -54,7 +54,7 @@ namespace API.Controllers
 
             if (result == null) return BadRequest(new ApiResponse(400, "Problem with your payment"));
 
-            return (PaymentReturnDto)result;
+            return Ok(result);
         }
 
         [HttpPost("webhook")]
