@@ -62,6 +62,10 @@ namespace Infrastructure.Services
             // save to db
             var result = await _unitOfWork.Complete();
 
+            //clear the cart
+            basket.Items = new List<BasketItem>();
+            var basketUpdate = await _basketRepo.UpdateBasketAsync(basket);
+
             if (result <= 0) return null;
 
             // return order

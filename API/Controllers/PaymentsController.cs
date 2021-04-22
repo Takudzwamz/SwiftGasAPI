@@ -86,5 +86,15 @@ namespace API.Controllers
             return new EmptyResult();
         }
 
+
+         [HttpPost("payfastwebhook")]
+        public async Task<ActionResult> PayFastWebhook()
+        {
+            var json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
+
+            
+
+            return Ok();
+        }
     }
 }
