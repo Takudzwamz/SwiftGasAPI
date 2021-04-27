@@ -97,8 +97,8 @@ namespace API.Controllers
         /// </summary>
         /// <param name="notify"></param>
         /// <returns></returns>
-        [HttpPost("payfastnotifywebhook")]
-        public async Task PayFastWebhook(PayFast.PayFastNotify notify)
+        [HttpGet("payfastnotifywebhook")]
+        public async Task PayFastWebhook()
         {
             const string callbackScheme = "myapp";
 
@@ -116,6 +116,7 @@ namespace API.Controllers
                 .Select(kvp => $"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}"));
 
             // Redirect to final url
+            //a 300 permenent redirect is the best. 
             Request.HttpContext.Response.Redirect(url);
 
         }

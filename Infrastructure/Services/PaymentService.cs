@@ -99,7 +99,7 @@ namespace Infrastructure.Services
         public async Task<object> CreatepayFastOrder(string email, int deliveryMethodId, string basketId)
         {
             // get the basket
-            var basket = await _basketRepository.GetBasketAsync(basketId);
+            var basket = await _basketRepository.GetBasketAsync(basketId); //not working 
             // get items from the product repo
             var items = new List<OrderItem>();
             foreach (var item in basket.Items)
@@ -134,12 +134,12 @@ namespace Infrastructure.Services
 
                 // Transaction Details
                 m_payment_id = Guid.NewGuid().ToString(),
-                amount = (double)subtotal,
+                amount = 3000,// (double)subtotal,
                 item_name = "Payment",
                 item_description = "Some details about the once off payment",
 
                 // Transaction Options
-                email_confirmation = true,
+                email_confirmation = false,
                 confirmation_address = email
             };
 

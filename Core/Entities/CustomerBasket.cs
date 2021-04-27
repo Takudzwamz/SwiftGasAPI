@@ -19,5 +19,8 @@ namespace Core.Entities
         public string ClientSecret { get; set; }
         public string PaymentIntentId { get; set; }
         public decimal ShippingPrice { get; set; }
+
+        //Use this until there is a complete fix. 
+        public bool BasketExists { get; set; } = true;
     }
 }

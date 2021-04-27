@@ -22,7 +22,7 @@ namespace API.Controllers
         {
             var basket = await _basketRepository.GetBasketAsync(id);
 
-            return Ok(basket ?? new CustomerBasket(id));
+            return Ok(basket ?? new CustomerBasket(id) { BasketExists = false }); ;
         }
 
         [HttpPost]
