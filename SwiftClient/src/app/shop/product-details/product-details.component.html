@@ -1,0 +1,57 @@
+<div class="container mt-5 mb-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="images p-3">
+                            <div class="text-center mb-2 ">
+                                <carousel>
+                                    <slide>
+                                        <img src="{{product.pictureUrl}}" alt="{{product.name}}"
+                                            style="display: block; width: 100%; " />
+                                    </slide>
+                                </carousel>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="logo" class="d-flex align-items-center">  <span href="/"
+                                        class="ml-1">Back</span> </div>
+                            </div>
+                            <div class="mt-4 mb-3">
+                                <h5 style="color:#ff5e14;" class="text-uppercase">{{product.name}}</h5>
+                                <div class="price d-flex flex-row align-items-center"> <span style="color:#09052e;"
+                                        class="act-price">{{product.price | currency:'R'}}</span>
+
+                                </div>
+                            </div>
+                            <p class="about">{{product.description}}</p>
+                            <div class="sizes mt-5">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <i (click)="decrementQuantity()"
+                                        class="fa fa-minus-circle text-#09052e text-warning mr-2"
+                                        style="cursor: pointer;color:#09052e; font-size: 2em;"></i>
+                                    <span class="font-weight-bold" style="font-size: 1.5em;">{{quantity}}</span>
+                                    <i (click)="incrementQuantity()" class="fa fa-plus-circle text-warning mx-2"
+                                        style="cursor: pointer;color:#09052e; font-size: 2em;"></i>
+
+                                </div>
+                            </div>
+                            <div class="cart mt-4 align-items-center"> <button (click)="addItemToBasket()"
+                                    style="color:white;"
+                                    class="btn btn-outline-primary text-#09052e text-uppercase mr-2 px-4">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

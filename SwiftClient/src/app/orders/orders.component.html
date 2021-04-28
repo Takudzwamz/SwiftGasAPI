@@ -1,0 +1,26 @@
+<div class="blur" class="container mt-5">
+  <div style="color: #09052e" class="row">
+    <div style="color: #09052e; overflow-x: auto" class="col-12">
+      <table style="color: #09052e" class="table" style="cursor: pointer">
+        <thead class="thead-light">
+          <tr>
+          <th>Order</th>
+            <th>Date</th>
+            <th>Buyer Email</th>
+            <th>Total</th>
+            <th>Status</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="color: #09052e" *ngFor="let order of orders.slice().reverse()" routerLink="/orders/{{ order.id }}">
+            <th># {{ order.id }}</th>
+            <td>{{ order.orderDate | date: "medium" }}</td>
+            <td>{{ order.buyerEmail }}</td>
+            <td>{{ order.total | currency: "R" }}</td>
+            <td>{{ order.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.sidebar {
+
+  width: 20%;
+  padding: 10px 5px;
+  float: left;
+  margin: 0 25px;
+}
+ul{
+  list-style-type: none;
+}
+.nav-link {
+  color: #09052e !important;
+  font-weight: 600 !important;
+  line-height: 60px !important;
+}
+
+
+
+
+.nav-link.active,
+.nav-link:hover {
+  // color: rgba(0, 0, 0, 0.6) !important;
+  //color: #009688 !important;
+  color: #09052e !important;
+  transition: 0.6s;
+}
+.nav-item {
+  position: relative;
+}
+
+.nav-item .nav-link.active:before {
+  content: "";
+  position: absolute;
+  width: 74%;
+  height: 2px;
+  bottom: 16px;
+  left: 16px;
+  //background: #09052e;
+  transition: all 0.3s ease-in-out 0s;
+}

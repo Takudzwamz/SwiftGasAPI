@@ -1,0 +1,38 @@
+button.nav-link {
+    
+    border-radius: 0;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+     overflow: hidden;
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.5);
+color: #09052e;
+    border-radius: 10px;
+
+    &:focus {
+        outline: none;
+        color: #09052e;
+    }
+    &.active:hover {
+        color: #09052e;
+    }
+    & :active {
+        outline: none;
+        color: #09052e;
+    }
+    &.active:focus {
+        outline: none;
+    }
+    &:disabled:not(.active) {
+        color: #09052e;
+    }
+}
+
+
+.SideBar1{
+border-radius: 10px;
+background: linear-gradient(145deg, #ffffff, #e6e6e6);
+box-shadow:  31px 31px 100px #a8a8a8,
+             -31px -31px 100px #ffffff;
+             
+}

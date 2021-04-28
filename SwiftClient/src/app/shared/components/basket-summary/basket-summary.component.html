@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<ng-container  *ngIf="items.length > 0">
+   
+<div class="card">
+    <div class="row">
+        <div class="col-md-8 cart">
+            
+            <div  *ngFor="let item of items">
+               <div  class="row border-top border-bottom">
+                <div  class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="{{item.pictureUrl}}" alt="{{item.productName}}"></div>
+                    <div class="col">
+                        <div style="color: #09052e;" *ngIf="item.type" class="row ">{{item.type}}</div>
+                        <div  class="row"><a  routerLink="/shop/{{item.id || item.productId}}" class="text-dark">{{item.productName}}</a></div>
+                    </div>
+                    <div style="color: #09052e;" class="d-flex align-items-center" [class.justify-content-center]="!isBasket">
+                        <i *ngIf="isBasket" (click)="decrementItemQuantity(item)" class="fa fa-minus-circle text-warning mr-2"
+                            style="cursor: pointer;"></i>
+                        <span class="font-weight-bold" style="font-size: 1em;">
+                            {{item.quantity}}
+                        </span>
+                        <i *ngIf="isBasket" (click)="incrementItemQuantity(item)" class="fa fa-plus-circle text-warning mx-2"
+                            style="cursor: pointer; "></i>
+                    </div>
+                    <div style="color:#09052e;" class="col">{{item.price * item.quantity | currency:'R'}}<a class="text-danger">
+                        <i *ngIf="isBasket" (click)="removeBasketItem(item)" class="fa fa-trash"
+                            style="cursor: pointer;"></i>
+                    </a></div>
+                </div>
+            </div> 
+            </div>          
+        </div>
+        
+    </div>
+</div>
+
+</ng-container>
+

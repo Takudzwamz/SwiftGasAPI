@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infrastructure.Identity.Migrations
 {
-    public partial class MySqlIdentityInital : Migration
+    public partial class _3DIdentityInital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

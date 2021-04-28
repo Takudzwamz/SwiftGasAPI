@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20210329130348_SwiftGasAdded")]
-    partial class SwiftGasAdded
+    [Migration("20210428094859_3DEntityAdded")]
+    partial class _3DEntityAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

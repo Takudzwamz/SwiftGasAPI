@@ -1,0 +1,19 @@
+
+<ng-container *ngIf="(breadcrumb$ | async) as breadcrumbs">
+
+    <section *ngIf="breadcrumbs.length > 0 && breadcrumbs[breadcrumbs.length-1].label !== 'Home'">
+
+        <xng-breadcrumb  [separator]="iconTemplate"></xng-breadcrumb>
+
+        <ng-template  #iconTemplate>
+            <mat-icon>arrow_right</mat-icon>
+        </ng-template>
+<div class="wrapper " *ngIf="!(isAdmin$ | async)"><a style="font-size: 30px;text-decoration: none;
+              color: #29256A; margin-bottom: 2px;" class="p-2" routerLink="/basket"> <i class="fa fa-shopping-basket text-#09052e" aria-hidden="true"></i> <span
+                        *ngIf="(basket$ | async)" style="font-size: 20px;text-decoration: none;
+              color: red;">{{(basket$ | async).items.length}}</span></a></div>
+
+    </section>
+    
+
+</ng-container>

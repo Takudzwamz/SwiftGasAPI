@@ -1,0 +1,128 @@
+<!-- Contact Info Start -->
+<div class="container-fluid contact-info pt-3 pb-3 mt-5 mb-4">
+  <div class="container" style="padding: 0 30px">
+    <div class="row">
+
+
+
+      <div class="col-md-4 d-flex align-items-center justify-content-center bg-secondary mb-4 mb-lg-0" style="height: 100px;
+        background: rgba( 80, 75, 75, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10.0px );
+-webkit-backdrop-filter: blur( 10.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+        ">
+        <div class="d-inline-flex">
+
+          <div class="d-flex flex-column">
+            <a class="nav-link" routerLink="/admin" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">
+              Products
+
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 d-flex align-items-center justify-content-center bg-primary mb-4 mb-lg-0" style="height: 100px;
+        color: #09052e;
+        background: rgba( 80, 75, 75, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10.0px );
+-webkit-backdrop-filter: blur( 10.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+        
+        ">
+        <div class="d-inline-flex text-left">
+
+          <div class="d-flex flex-column">
+            <a class="nav-link" routerLink="/orders" routerLinkActive="active">
+              Orders
+
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Contact Info End -->
+
+
+<section class="admin-page" *ngIf="products">
+  <div class="container">
+    <div style="
+    background: white;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10.0px );
+-webkit-backdrop-filter: blur( 10.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+     color: #09052e;
+    " class="row">
+      <div class="col-lg-12">
+        <div style="color: #09052e;" class="d-flex justify-content-between my-3">
+          <header class="h2">Products List</header>
+          <button [routerLink]="['/admin/create']" class="btn btn-outline-success">Create new Product</button>
+        </div>
+
+        <app-paging-header [totalCount]="totalCount" [pageSize]="this.shopParams.pageSize"
+          [pageNumber]="this.shopParams.pageNumber"></app-paging-header>
+
+        <div class="table-responsive">
+          <table style="color: #09052e;" class="table">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <div class="p-2">Id</div>
+                </th>
+                <th scope="col">
+                  <div style="color: #09052e;" class="p-2 text-uppercase ">Products</div>
+                </th>
+                <th scope="col">
+                  <div class="py-2 text-uppercase">Name</div>
+                </th>
+                <th scope="col">
+                  <div class="p-2 px-3 text-uppercase">Price</div>
+                </th>
+                <th scope="col">
+                  <div class="p-2 px-3 text-uppercase">Edit</div>
+                </th>
+                <th scope="col">
+                  <div class="p-2 px-3 text-uppercase">Delete</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products">
+                <td class="align-middle">{{product.id}}</td>
+                <td>
+                  <div class="p-2">
+                    <img src="{{product.pictureUrl || '/assets/images/placeholder.png'}}" alt="{{product.name}}"
+                      class="img-fluid" style="max-height: 50px">
+                  </div>
+                </td>
+                <th class="align-middle">
+                  <h5>{{product.name}}</h5>
+                </th>
+                <td class="align-middle">{{product.price | currency:'R'}}</td>
+                <td class="align-middle"><button [routerLink]="['edit', product.id]"
+                    class="btn btn-warning">Edit</button></td>
+                <td class="align-middle"><button (click)="deleteProduct(product.id)"
+                    class="btn btn-danger">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center" *ngIf="totalCount > 0">
+          <app-pager [pageSize]="shopParams.pageSize" [pageNumber]="shopParams.pageNumber" [totalCount]="totalCount"
+            (pageChanged)="onPageChanged($event)"></app-pager>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

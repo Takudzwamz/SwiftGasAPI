@@ -1,0 +1,56 @@
+
+
+
+<section style="margin-top:20px" class="blur">
+    <div class="mt-4" [formGroup]="checkoutForm">
+    <div style="color#ff5e14;" class="d-flex justify-content-between align-items-center">
+        <h4  style="color:#ff5e14;">Shipping Address</h4>
+        <button
+            (click)="saveUserAddress()"
+            [disabled]="!checkoutForm.get('addressForm').valid ||
+                !checkoutForm.get('addressForm').dirty"
+            class="btn btn-outline-success mb-3"
+            style="border-radius:30px;">
+            Save Address
+        </button>
+    </div>
+    <div class="col-75" formGroupName="addressForm">
+        <div class="form-group col-25">
+            <app-text-input [label]="'First Name'" formControlName="firstName"></app-text-input>
+        </div>
+        <div class="form-group col-25">
+            <app-text-input [label]="'Last Name'" formControlName="lastName"></app-text-input>
+        </div>
+        <div class="form-group col-25">
+            <app-text-input [label]="'Street'" formControlName="street"></app-text-input>
+        </div>
+        <div class="form-group col-25">
+            <app-text-input [label]="'City'" formControlName="city"></app-text-input>
+        </div>
+        <div class="form-group col-25">
+            <app-text-input [label]="'State'" formControlName="state"></app-text-input>
+        </div>
+        <div class="form-group col-25">
+            <app-text-input [label]="'Zip Code'" formControlName="zipcode"></app-text-input>
+        </div>
+           <div class="form-group col-25">
+          <app-text-input [label]="'Phone Number'" formControlName="phoneNumber"></app-text-input>
+      </div>
+    </div>
+</div>
+
+<div  class="col-25" class="float-none d-flex justify-content-between flex-column flex-lg-row mt-2 mb-5">
+    <button class="btn btn-outline-primary" routerLink="/basket">
+        <i class="fa fa-angle-left"></i> Back to Basket
+    </button>
+    <button [disabled]="(checkoutForm.get('addressForm').invalid ||(checkoutForm.get('addressForm').valid &&
+    checkoutForm.get('addressForm').dirty) ) " class="btn btn-primary" cdkStepperNext>
+        Go to Delivery <i class="fa fa-angle-right"></i>
+    </button>
+
+</div>
+<span class="span-error" *ngIf="checkoutForm.get('addressForm').valid &&
+checkoutForm.get('addressForm').dirty">
+You should save address before go to Delivery!!!
+</span>
+</section>

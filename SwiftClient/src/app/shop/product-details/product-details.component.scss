@@ -1,0 +1,107 @@
+body {
+    background-color: #000
+}
+
+.card {
+    border: none;
+    
+border-radius: 10px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  21px 21px 42px #999999,
+             -21px -21px 42px #ffffff;
+
+}
+
+.product {
+    
+     border-radius: 10px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  21px 21px 42px #999999,
+             -21px -21px 42px #ffffff;
+    color: #09052e;
+ 
+
+}
+
+
+.logo {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.brand {
+    font-size: 13px;
+    color: #09052e;
+}
+
+.btn-outline-primary {
+    color: #09052e;
+    //border-color: #3f51b5;
+}
+
+.act-price {
+    color: orangered;
+    font-weight: 900;
+    font-size: 29PX;
+}
+
+.dis-price {
+    text-decoration: line-through
+}
+
+.about {
+    font-size: 14px
+}
+
+.color {
+    margin-bottom: 10px
+}
+
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span {
+    padding: 2px 9px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    color: #ff0000;
+    border-radius: 3px;
+    text-transform: uppercase
+}
+
+label.radio input:checked+span {
+    border-color: #ff0000;
+    background-color: #ff0000;
+    color: #fff
+}
+
+.btn-danger {
+    background-color: rgb(137, 183, 184)!important;
+    border-color: rgb(137, 183, 184) !important
+}
+
+.btn-danger:hover {
+    background-color: rgb(137, 183, 184) !important;
+    border-color: rgb(137, 183, 184) !important
+}
+
+.btn-danger:focus {
+    box-shadow: none
+}
+
+.cart i {
+    margin-right: 10px
+}
