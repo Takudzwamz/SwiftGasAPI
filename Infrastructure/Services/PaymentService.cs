@@ -96,10 +96,9 @@ namespace Infrastructure.Services
             }
         }
 
-        public async Task<object> CreatepayFastOrder(string email, int deliveryMethodId, string basketId)
+        public async Task<object> CreatepayFastOrder(string email, int deliveryMethodId, string basketId, CustomerBasket basket)
         {
             // get the basket
-            var basket = await _basketRepository.GetBasketAsync(basketId); //not working 
             // get items from the product repo
             var items = new List<OrderItem>();
             foreach (var item in basket.Items)
