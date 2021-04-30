@@ -1,98 +1,34 @@
 [
   {
-    "Name": "Laundy 1kg",
-    "Description": "All typyes of clothes allowed. 1kg is measured buy 43cm * 10cm.",
-    "Price": 10,
-    "PictureUrl": "images/products/40c997fa-59c1-4a1f-b323-cb7337136cf3.png",
-    "ProductTypeId": 1,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Ironing 1kg",
-    "Description": "All typyes of clothes allowed. 1kg is measured buy 43cm * 10cm.",
-    "Price": 7,
-    "PictureUrl": "images/products/1876751b-597f-4373-bbb3-bdf76f5fef0b.png",
-    "ProductTypeId": 1,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Dry Cleaning: 1 Jacket",
-    "Description": "Single jacket dry cleaning.",
-    "Price": 100,
+    "Name": "Gas/kg",
+    "Description": "LPG - liquefied petroleum gas or liquid petroleum gas – (LP gas), the constituents of which are propane and butane, are flammable hydrocarbon fuel gases used for LPG heating, cooking and vehicles.",
+    "Price": 20,
     "PictureUrl": "images/products/0d947ac1-f60d-471d-a41e-d4ed7a6d3121.png",
     "ProductTypeId": 1,
     "ProductBrandId": 1
   },
   {
-    "Name": "Dry Cleaning: 1 OverCoat",
-    "Description": "Single overcoat dry cleaning.",
-    "Price": 150,
+    "Name": "Exchange-9kgs",
+    "Description": "LPG - liquefied petroleum gas or liquid petroleum gas – (LP gas), the constituents of which are propane and butane, are flammable hydrocarbon fuel gases used for LPG heating, cooking and vehicles.",
+    "Price": 180,
+    "PictureUrl": "images/products/0d947ac1-f60d-471d-a41e-d4ed7a6d3121.png",
+    "ProductTypeId": 1,
+    "ProductBrandId": 1
+  },
+  {
+    "Name": "Exchange-19kgs",
+    "Description": "LPG - liquefied petroleum gas or liquid petroleum gas – (LP gas), the constituents of which are propane and butane, are flammable hydrocarbon fuel gases used for LPG heating, cooking and vehicles.",
+    "Price": 380,
     "PictureUrl": "images/products/4951fb22-46e2-4de6-a7e0-1d05ee1cbf84.png",
     "ProductTypeId": 1,
     "ProductBrandId": 1
   },
   {
-    "Name": "Dry Cleaning: 1 Trouse",
-    "Description": "Single trouse dry cleaning.",
-    "Price": 60,
+    "Name": "Exchange-48kgs",
+    "Description": "LPG - liquefied petroleum gas or liquid petroleum gas – (LP gas), the constituents of which are propane and butane, are flammable hydrocarbon fuel gases used for LPG heating, cooking and vehicles.",
+    "Price": 960,
     "PictureUrl": "images/products/243cc1a3-a555-45a7-97a3-ad54d786f9a7.png",
     "ProductTypeId": 1,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Dry Cleaning: 1 Wedding gown",
-    "Description": "Single wedding dress dry cleaning.",
-    "Price": 800,
-    "PictureUrl": "images/products/69495ee5-f03c-4a9a-a919-43f259eaab21.png",
-    "ProductTypeId": 1,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Dry Cleaning: 1 Blazer",
-    "Description": "Single blazer dry cleaning.",
-    "Price": 200,
-    "PictureUrl": "images/products/51a08788-d403-4f6a-b93e-b6401e3eb31b.png",
-    "ProductTypeId": 2,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Dry Cleaning: 1 Ball Gown",
-    "Description": "Single ball gown dry cleaning.",
-    "Price": 320,
-    "PictureUrl": "images/products/ad6e6063-7510-440b-aa22-9ca0295a97ac.png",
-    "ProductTypeId": 2,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Dry Cleaning: 1 Jersey",
-    "Description": "Single jersey dry cleaning.",
-    "Price": 90,
-    "PictureUrl": "images/products/5487212a-6b0a-4fcf-a417-63cdc02cc2f3.png",
-    "ProductTypeId": 2,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Dry Cleaning: 1 Bomba Jacket",
-    "Description": "Single jacket dry cleaning.",
-    "Price": 100,
-    "PictureUrl": "images/products/96eb708f-63f0-4f95-8cc0-30599437d3f6.png",
-    "ProductTypeId": 2,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Blankets",
-    "Description": "Single blanket laundry.",
-    "Price": 120,
-    "PictureUrl": "images/products/cebcb0b6-5120-45fa-9f9a-46be087f7b27.png",
-    "ProductTypeId": 2,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Shoe cleaning 1 pair",
-    "Description": "Shoe cleaning.",
-    "Price": 75,
-    "PictureUrl": "images/products/705080b2-90f3-4c2d-954f-4dfeb9f1d3a7.png",
-    "ProductTypeId": 2,
     "ProductBrandId": 1
   }
 ]

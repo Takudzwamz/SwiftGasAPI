@@ -1,11 +1,35 @@
 [
   {
     "Id": 1,
-    "Name": "Gas Products"
+    "Name": "Gas"
   },
   {
     "Id": 2,
-    "Name": "Accessories"
+    "Name": "Installers"
+  },
+  {
+    "Id": 3,
+    "Name": "Valves"
+  },
+  {
+    "Id": 4,
+    "Name": "Blow-torches"
+  },
+  {
+    "Id": 5,
+    "Name": "Lab equipment"
+  },
+  {
+    "Id": 6,
+    "Name": "Heaters"
+  },
+  {
+    "Id": 7,
+    "Name": "DIY"
+  },
+  {
+    "Id": 8,
+    "Name": "Ring burners"
   }
   
 ]

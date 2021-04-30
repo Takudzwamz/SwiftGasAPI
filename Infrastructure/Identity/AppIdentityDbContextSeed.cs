@@ -33,8 +33,8 @@ namespace Infrastructure.Identity
                     new AppUser
                     {
                         DisplayName = "Admin",
-                        Email = "admin@test.com",
-                        UserName = "admin@test.com"
+                        Email = "admin@swiftgas.co.za",
+                        UserName = "admin@swiftgas.co.za"
                     }
                 };
 
@@ -51,9 +51,9 @@ namespace Infrastructure.Identity
 
                 foreach (var user in users)
                 {
-                    await userManager.CreateAsync(user, "Pa$$w0rd");
+                    await userManager.CreateAsync(user, "SwiftGasPa$$w0rd");
                     await userManager.AddToRoleAsync(user, "Member");
-                    if (user.Email == "admin@test.com") await userManager.AddToRoleAsync(user, "Admin");
+                    if (user.Email == "admin@swiftgas.co.za") await userManager.AddToRoleAsync(user, "Admin");
                 }
             }
         }
