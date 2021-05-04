@@ -27,18 +27,18 @@
 <ng-container *ngIf="(currentUser$ | async) === null" >
 
   <a style="font-size: 20px;text-decoration: none;
-  color: #09052e;" class="p-2 " routerLink="/account/login"> <i class="fas fa-sign-in-alt"></i></a>
+  color: #ff5e14;" class="p-2 " routerLink="/account/login"> <i class="fas fa-sign-in-alt"></i></a>
 
   
   <a style="font-size: 20px;text-decoration: none;
-  color: #09052e;" class="p-2 " routerLink="/account/register" > <i class="fas fa-user-plus"></i></a>
+  color: #ff5e14;" class="p-2 " routerLink="/account/register" > <i class="fas fa-user-plus"></i></a>
 
 
 </ng-container>
 
 <ng-container *ngIf="currentUser$ | async">
   <div class="dropdown ml-3 mr-4" dropdown>
-    <a class="dropdown-toggle" style="cursor: pointer; color: #09052e;" dropdownToggle>
+    <a class="dropdown-toggle" style="cursor: pointer; color: #ff5e14;" dropdownToggle>
       <strong> <i class="fa fa-2x fa-user" aria-hidden="true"></i></strong>
     </a>
     <div class="dropdown-menu dropdown-menu-right" style="cursor: pointer;" *dropdownMenu>
