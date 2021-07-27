@@ -2,7 +2,7 @@
   <div class="container">
     <ng-container *ngIf="!addPhotoMode">
       <div class="d-flex justify-content-between mb-3">
-        <h3>Service Photos</h3>
+        <h3>Product Photo</h3>
         <button class="btn btn-primary" (click)="addPhotoModeToggle()">
           Add New Photo
         </button>
@@ -32,7 +32,11 @@
     </ng-container>
     <ng-container *ngIf="addPhotoMode">
       <div class="d-flex justify-content-between mb-3">
-        <h3 class="text-primary">Add new service image</h3>
+        <h3 class="text-primary">Add new product image</h3>
+        <div class="d-flex justify-content-between mb-3">
+          <p>Acceptable image dimensions: Aspect ratio- 16:9, image size- anything under 200 kb/kilobytes. </p>
+        </div>
+        
         <button class="btn btn-outline-secondary" (click)="addPhotoModeToggle()">Cancel</button>
       </div>
       <div class="progress form-group" *ngIf="progress > 0">

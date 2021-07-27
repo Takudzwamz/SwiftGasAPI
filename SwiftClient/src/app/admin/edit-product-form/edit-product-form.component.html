@@ -1,3 +1,43 @@
+
+<div
+  style="
+   background:white;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #09052e;
+  "
+  class="container-fluid py-0"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 m-0 my-lg-5 pt-0 pt-lg-5 pr-lg-5">
+        <h2 style="color: #ff5e14;" class="text-#ff5e14 text-uppercase font-weight-medium mb-3">
+          Welcome to the create new products Page!
+        </h2>
+        
+        <p style="color: #09052e; text-align:justify;">
+          This is where you add new products:
+        </p>
+        <p style="color: #09052e; text-align:justify;">
+          1. Add all the relevant product information and click on "Submit button".
+        </p>
+        <p style="color: #09052e; text-align:justify;">
+          2. Add products photos after the product is created/After clicking submit.
+          ** to add product photos go to the recently created product without a photo in the Product List in the Admin page and click on edit button, 
+          you will be taken to the "Edit product page". Then click on edit photos tab.
+        </p>
+        <p style="color: #09052e; text-align:justify;">
+          3. After uploading the photo come back to the edit product tab and click submit again to save your changes. 
+          And voila you've successfully added a new product to the catalogue and it'll appear in the shop page. 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <form 
  #productForm="ngForm" (ngSubmit)="onSubmit(productForm.valid && productForm.value)">
   <div  class="form-row">

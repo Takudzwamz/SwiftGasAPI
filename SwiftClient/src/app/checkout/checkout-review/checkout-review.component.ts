@@ -63,9 +63,11 @@ export class CheckoutReviewComponent implements OnInit {
     this.getOrders();
 
     this.payfast = new PayFastAPI({
-      merchant_id: '17309722',
-      merchant_key: 'sd2wh83wpfttm',
-      production: true,
+      merchant_id: '10000100',
+      merchant_key: '46f0cd694581a',
+     // merchant_id: '17309722',
+     // merchant_key: 'sd2wh83wpfttm',
+      production: false,
     });
   }
 
